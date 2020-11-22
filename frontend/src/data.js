@@ -1,0 +1,37 @@
+export default {
+  products: [
+    {
+      _id: 1,
+      name: "Slim Shirt",
+      category: "Shirts",
+      image: "/images/d1.jpg",
+      price: 50,
+      brand: "Nike",
+      description: "good shirt",
+      rating: 4.4,
+      numReviews: 7,
+    },
+    {
+      _id: 2,
+      name: "Fit Shirt",
+      category: "Shirts",
+      image: "/images/d1.jpg",
+      price: 80,
+      brand: "Nike",
+      description: "hifi shirt",
+      rating: 4.0,
+      numReviews: 5,
+    },
+    {
+      _id: 3,
+      name: "Best Pant",
+      category: "Pants",
+      image: "/images/d1.jpg",
+      price: 70,
+      brand: "Nike",
+      description: "Gorgeous shirt",
+      rating: 4.1,
+      numReviews: 8,
+    },
+  ],
+};

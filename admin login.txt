@@ -1,0 +1,10 @@
+Admin
+---------
+username: tarik@gmail.com
+pass: 1234
+Normal user
+----------
+username: sani@gmail.com
+pass: 123
+
+after admin logging for managing products, http://localhost:3000/products
