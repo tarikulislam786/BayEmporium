@@ -14,6 +14,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import OrderScreen from "./screens/OrderScreen";
 import { createBrowserHistory as createHistory } from "history";
 import { photosStore } from "./store";
 //import PhotoForm from "./PhotoForm";
@@ -137,6 +138,7 @@ function App() {
             <Route path="/placeorder" component={PlaceOrderScreen} />
             <Route path="/register" component={RegisterScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
+            <Route path="/order/:id" component={OrderScreen} />
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
           </div>

@@ -3,10 +3,11 @@ import { addToCart, removeFromCart } from "../actions/cartActions";
 import { signin, register } from "../actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import MessageBox from '../components/MessageBox';
 function CartScreen(props) {
   // get access cart from Redux store
   const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
+  const { cartItems, error } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const userRegister = useSelector((state) => state.userRegister);
   const { userInfo } = userSignin;
@@ -44,8 +45,11 @@ function CartScreen(props) {
             <h3>Shopping Cart</h3>
             <div>Price</div>
           </li>
+          {error && <MessageBox variant="danger">{error}</MessageBox>}
           {cartItems.length === 0 ? (
-            <div>Cart is empty</div>
+             <MessageBox>
+             Cart is empty. <Link to="/">Go Shopping</Link>
+           </MessageBox>
           ) : (
             cartItems.map((item) => (
               <li>
